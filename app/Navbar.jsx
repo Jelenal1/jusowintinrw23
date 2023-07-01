@@ -13,7 +13,7 @@ function Navbar() {
         className="flex items-center text-2xl gap-2 p-1 select-none"
       >
         <img
-          src="../img/jusologonoir.svg"
+          src="/img/jusologonoir.svg"
           className="h-14"
           alt="jusologo noir"
         />
