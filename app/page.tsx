@@ -10,7 +10,8 @@ export default function Home() {
 		<>
 			<h1 className='text-2xl text-center'>Unsere Kanditat*innen</h1>
 			<div className='flex flex-col items-center lg:grid lg:grid-cols-2'>
-				<div className={style.card}>
+        <Link href="/valeriamuster">
+        <div className={style.card}>
 					<div className={style.cardimagewarpper}>
 						<img
 							src='/img/Valeria_muster-2.jpg'
@@ -23,6 +24,8 @@ export default function Home() {
 						</h2>
 					</div>
 				</div>
+        </Link>
+			<Link href="/michiweidmann">
 				<div className={style.card}>
 					<div className={style.cardimagewarpper}>
 						<img
@@ -36,6 +39,8 @@ export default function Home() {
 						</h2>
 					</div>
 				</div>
+        </Link>
+        <Link href="/rafaelrueegg">
 				<div className={style.card}>
 					<div className={style.cardimagewarpper}>
 						<img
@@ -49,6 +54,8 @@ export default function Home() {
 						</h2>
 					</div>
 				</div>
+        </Link>
+        <Link href="/piavoss">
 				<div className={style.card}>
 					<div className={style.cardimagewarpper}>
 						<img
@@ -62,6 +69,8 @@ export default function Home() {
 						</h2>
 					</div>
 				</div>
+        </Link>
+        <Link href="/jelenaspeer">
 				<div className={style.card}>
 					<div className={style.cardimagewarpper}>
 						<img
@@ -75,6 +84,7 @@ export default function Home() {
 						</h2>
 					</div>
 				</div>
+        </Link>
 			</div>
 		</>
 	);
