@@ -18,9 +18,11 @@ export default function ValeriaMuster() {
 				className={style.image}
 			/>
 			<div className={style.quote}>
-				<div className='ml-2 mb-2'>
-					<h2 className='lg:text-xl text-lg h-fit'>Valeria Muster</h2>
+				<div className='ml-2 mb-2 flex flex-col'>
+					<h2 className='lg:text-xl text-lg h-fit '>Valeria Muster</h2>
 					<span className='text-xs'>Sie/Ihr</span>
+					<span className='text-xs'>21</span>
+
 				</div>
 				<h2 className='lg:text-2xl text-sm sm:ml-5'>
 					«Ich würde meinen rechten Arm geben - den linken eher nicht so… ich
@@ -51,6 +53,14 @@ export default function ValeriaMuster() {
 					dem Buckel der 99 Prozent auszutragen.
 				</p>
 			</div>
+
+			<div className={style.paragraphwrapper}>
+				<h2 className={style.paragraphtitel}>Für das stehe ich</h2>
+				<p className={style.paragraph}>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas molestiae placeat quod aliquid enim a dolor repudiandae consequuntur fuga maxime?
+				</p>
+			</div>
+
 		</div>
 	);
 }
