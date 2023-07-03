@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
 	const style = {
-		card: "bg-rose-400 rounded-lg p-2 max-w-4xl m-2",
+		card: "bg-rose-400 rounded-lg p-2 m-2",
 		cardimagewarpper: "flex items-center gap-2",
 	};
 
@@ -19,7 +19,7 @@ export default function Home() {
 								alt='Valeria Muster'
 								className='rounded-full aspect-square w-32 sm:w-44 object-cover object-top'
 							/>
-							<h2 className='text-sm'>
+							<h2 className='text-sm sm:text-xl'>
 								Ich würde meinen rechten Arm geben - den linken eher nicht so… ich
 								bin Linkshändlerin
 							</h2>
@@ -34,7 +34,7 @@ export default function Home() {
 								alt='Valeria Muster'
 								className='rounded-full aspect-square w-32 sm:w-44 object-cover object-top'
 							/>
-							<h2 className='text-sm'>
+							<h2 className='text-sm sm:text-xl'>
 								Ich würde meinen rechten Arm geben - den linken eher nicht so… ich
 								bin Linkshändlerin
 							</h2>
@@ -49,7 +49,7 @@ export default function Home() {
 								alt='Valeria Muster'
 								className='rounded-full aspect-square w-32 sm:w-44 object-cover object-top'
 							/>
-							<h2 className='text-sm'>
+							<h2 className='text-sm sm:text-xl'>
 								Ich würde meinen rechten Arm geben - den linken eher nicht so… ich
 								bin Linkshändlerin
 							</h2>
@@ -64,7 +64,7 @@ export default function Home() {
 								alt='Valeria Muster'
 								className='rounded-full aspect-square w-32 sm:w-44 object-cover object-top'
 							/>
-							<h2 className='text-sm'>
+							<h2 className='text-sm sm:text-xl'>
 								Ich würde meinen rechten Arm geben - den linken eher nicht so… ich
 								bin Linkshändlerin
 							</h2>
@@ -79,7 +79,7 @@ export default function Home() {
 								alt='Valeria Muster'
 								className='rounded-full aspect-square w-32 sm:w-44 object-cover object-top'
 							/>
-							<h2 className='text-sm'>
+							<h2 className='text-sm sm:text-xl'>
 								Ich würde meinen rechten Arm geben - den linken eher nicht so… ich
 								bin Linkshändlerin
 							</h2>
