@@ -10,8 +10,8 @@ export default function Home() {
 	return (
 		<>
 			<h1 className='text-2xl text-center'>Unsere Kanditat*innen</h1>
-			<div className='flex flex-col items-center lg:grid lg:grid-cols-2'>
-				<Link href="/valeriamuster">
+			<div className='grid items-center lg:grid-cols-2'>
+				<Link href='/valeriamuster'>
 					<div className={style.card}>
 						<div className={style.cardimagewarpper}>
 							<img
@@ -20,13 +20,13 @@ export default function Home() {
 								className='rounded-full aspect-square w-32 sm:w-44 object-cover object-top'
 							/>
 							<h2 className='text-sm sm:text-xl'>
-								Ich würde meinen rechten Arm geben - den linken eher nicht so… ich
-								bin Linkshändlerin
+								«Ich würde meinen rechten Arm geben - den linken eher nicht so…
+								ich bin Linkshändlerin»
 							</h2>
 						</div>
 					</div>
 				</Link>
-				<Link href="/michiweidmann">
+				<Link href='/michiweidmann'>
 					<div className={style.card}>
 						<div className={style.cardimagewarpper}>
 							<img
@@ -35,13 +35,12 @@ export default function Home() {
 								className='rounded-full aspect-square w-32 sm:w-44 object-cover object-top'
 							/>
 							<h2 className='text-sm sm:text-xl'>
-								Ich würde meinen rechten Arm geben - den linken eher nicht so… ich
-								bin Linkshändlerin
+							«Friede dem Wellblech, Krieg den Palästen.»
 							</h2>
 						</div>
 					</div>
 				</Link>
-				<Link href="/rafaelrueegg">
+				<Link href='/rafaelrueegg'>
 					<div className={style.card}>
 						<div className={style.cardimagewarpper}>
 							<img
@@ -50,13 +49,13 @@ export default function Home() {
 								className='rounded-full aspect-square w-32 sm:w-44 object-cover object-top'
 							/>
 							<h2 className='text-sm sm:text-xl'>
-								Ich würde meinen rechten Arm geben - den linken eher nicht so… ich
-								bin Linkshändlerin
+								Ich würde meinen rechten Arm geben - den linken eher nicht so…
+								ich bin Linkshändlerin
 							</h2>
 						</div>
 					</div>
 				</Link>
-				<Link href="/piavoss">
+				<Link href='/piavoss'>
 					<div className={style.card}>
 						<div className={style.cardimagewarpper}>
 							<img
@@ -65,13 +64,13 @@ export default function Home() {
 								className='rounded-full aspect-square w-32 sm:w-44 object-cover object-top'
 							/>
 							<h2 className='text-sm sm:text-xl'>
-								Ich würde meinen rechten Arm geben - den linken eher nicht so… ich
-								bin Linkshändlerin
+								Ich würde meinen rechten Arm geben - den linken eher nicht so…
+								ich bin Linkshändlerin
 							</h2>
 						</div>
 					</div>
 				</Link>
-				<Link href="/jelenaspeer">
+				<Link href='/jelenaspeer'>
 					<div className={style.card}>
 						<div className={style.cardimagewarpper}>
 							<img
@@ -80,8 +79,8 @@ export default function Home() {
 								className='rounded-full aspect-square w-32 sm:w-44 object-cover object-top'
 							/>
 							<h2 className='text-sm sm:text-xl'>
-								Ich würde meinen rechten Arm geben - den linken eher nicht so… ich
-								bin Linkshändlerin
+								Ich würde meinen rechten Arm geben - den linken eher nicht so…
+								ich bin Linkshändlerin
 							</h2>
 						</div>
 					</div>
