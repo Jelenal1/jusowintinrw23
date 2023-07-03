@@ -79,8 +79,7 @@ export default function Home() {
 								className='rounded-full aspect-square w-32 sm:w-44 object-cover object-top'
 							/>
 							<h2 className='text-sm sm:text-xl'>
-								Ich würde meinen rechten Arm geben - den linken eher nicht so…
-								ich bin Linkshändlerin
+							«Ich bin trans, antifaschistisch und queerfeministisch - ein bunter Wirbelwind im Sturm der Rebellion. Akzeptiere meine Existenz oder werde vom Wind der Veränderung fortgeweht.»
 							</h2>
 						</div>
 					</div>
