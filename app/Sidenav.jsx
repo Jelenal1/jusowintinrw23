@@ -16,17 +16,17 @@ function Sidenav({ open, setClosed }) {
         }
       >
         <button className="p-2 h-fit mb-20 mt-5" href="/" >
-          <FaTimes className="h-10 w-10 aspect-square" onClick={() => setClosed()}/>
+          <FaTimes className="h-10 w-10 aspect-square" onClick={() => setClosed()} />
         </button>
         <Link className="p-2 h-fit" href={"/"}>
           <FaHome className="h-10 w-10 aspect-square" />
         </Link>
-        <button
+        <Link href="/news"
           className="flex flex-col p-2 h-fit text-xl items-center"
         >
           <FaNewspaper className="h-10 w-10 aspect-square" />
           News
-        </button>
+        </Link>
       </div>
     </div>
   );

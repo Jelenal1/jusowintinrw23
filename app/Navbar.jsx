@@ -29,9 +29,7 @@ function Navbar() {
           onClick={() => setOpen(true)}
         />
       </div>
-      <Link href="/news">
-        <Sidenav open={open} setClosed={() => setOpen(false)} />
-      </Link>
+      <Sidenav open={open} setClosed={() => setOpen(false)} />
 
     </div>
   );
