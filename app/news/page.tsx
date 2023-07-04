@@ -3,12 +3,14 @@ import { collection, query, where, onSnapshot, doc } from "firebase/firestore";
 
 import { db } from "./firebase.js";
 import { useState } from "react";
+import DisplayImage from "./DisplayImage";
 
 interface Post {
     id: string;
     date: string;
     title: string;
     content: string;
+    imagename: string;
 }
 
 function BlogPosts() {
@@ -17,7 +19,7 @@ function BlogPosts() {
     const q = query(collection(db, "blogposts"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
         setBlogposts(
-            querySnapshot.docs.map((doc) => ({ id: doc.id, title: doc.data().title, date: doc.data().date, content: doc.data().content }))
+            querySnapshot.docs.map((doc) => ({ id: doc.id, title: doc.data().title, date: doc.data().date, content: doc.data().content, imagename: doc.data().imagename }))
         );
     });
 
@@ -29,6 +31,7 @@ function BlogPosts() {
                         className="flex flex-col border mx-auto text-center my-2 lg:w-3/4 "
                         key={post.id}
                     >
+                        <DisplayImage imagename={post.imagename} />
                         <h1 className="text-2xl">{post.title}</h1>
                         <h2 className="text-lg mb-4">{post.date}</h2>
                         {post.content.split("\n").map((text, index) => {
