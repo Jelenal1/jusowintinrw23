@@ -22,6 +22,8 @@ export default function DisplayImage({ imagename }: { imagename: string }) {
 
 
     return (
-        <img src={Url} alt="" className="object-contain w-full h-80" />
+        <div className="h-96 aspect-square">
+            <img src={Url} alt="" className="object-cover" />
+        </div>
     );
 }
