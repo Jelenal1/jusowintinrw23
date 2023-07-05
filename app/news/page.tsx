@@ -11,7 +11,7 @@ interface Post {
 function RenderBlogposts() {
   return (
     <>
-      <h1>Blog</h1>
+      <h1 className="text-2xl text-center">Blog</h1>
       <BlogPosts />
     </>
   );
