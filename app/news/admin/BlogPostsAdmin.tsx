@@ -93,8 +93,8 @@ function BlogPostsAdmin() {
                 <h2 className="text-lg mb-4">{post.date}</h2>
                 <textarea
                   name="content"
-                  cols="30"
-                  rows="10"
+                  cols={30}
+                  rows={10}
                   defaultValue={post.content}
                 ></textarea>
                 <button

@@ -32,7 +32,10 @@ export default function UploadForm() {
   };
 
   const handlePost = async (title: string, content: string, image: File) => {
-    const imageurl = await postImage(image);
+    let imageurl = '';
+    if (image) {
+      imageurl = await postImage(image);
+    }
     postDataToDb(title, content, imageurl);
   };
 
@@ -69,7 +72,7 @@ export default function UploadForm() {
       <textarea
         name="content"
         className="border rounded-sm w-full"
-        rows={15}
+        rows={5}
       ></textarea>
       <input
         type="submit"
