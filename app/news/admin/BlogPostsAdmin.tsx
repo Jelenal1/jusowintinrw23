@@ -5,6 +5,7 @@ import {
   onSnapshot,
   doc,
   deleteDoc,
+  setDoc,
 } from 'firebase/firestore';
 
 import { db } from '../firebase.js';
@@ -21,7 +22,7 @@ interface Post {
 
 function BlogPostsAdmin() {
   const [blogposts, setBlogposts] = useState<Post[]>([]);
-  const [onEdit, setOnEdit] = useState(false);
+  const [onEdit, setOnEdit] = useState<Post | null>(null);
 
   const q = query(collection(db, 'blogposts'));
   const unsubscribe = onSnapshot(q, (querySnapshot) => {
@@ -41,8 +42,18 @@ function BlogPostsAdmin() {
     await deleteDoc(docRef);
   };
 
+  const handleSave = async () => {
+    setOnEdit(null);
+    if (onEdit === null) return;
+    await setDoc(doc(db, 'blogposts', onEdit.id), {
+      title: onEdit.title,
+      content: onEdit.content,
+      imageurl: onEdit.imageurl,
+    });
+  };
+
   return (
-    <div className="p-2">
+    <div className="p-5">
       {blogposts.length === 0 ? <h1>Loading...</h1> : null}
       {blogposts.map((post) => {
         return (
@@ -57,21 +68,61 @@ function BlogPostsAdmin() {
               >
                 🗑️
               </button>
-              <button className="mx-auto w-full bg-yellow-200">✏️</button>
-              <button className="mx-auto w-full bg-green-200">✅</button>
+              <button
+                className="mx-auto w-full bg-yellow-200"
+                onClick={() => setOnEdit(post)}
+              >
+                ✏️
+              </button>
             </div>
-            <div className="h-96 aspect-square">
-              <img src={post.imageurl} className="object-cover w-full h-full" />
-            </div>
-            <h1 className="text-2xl">{post.title}</h1>
-            <h2 className="text-lg mb-4">{post.date}</h2>
-            {post.content.split('\n').map((text, index) => {
-              return (
-                <p className="text-lg" key={index}>
-                  {text}
-                </p>
-              );
-            })}
+            {onEdit?.id === post.id ? (
+              <>
+                <div className="h-96 aspect-square">
+                  <img
+                    src={post.imageurl}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                <input type="file" name="image" typeof="image/*" />
+                <input
+                  type="text"
+                  name="title"
+                  defaultValue={post.title}
+                  className="text-xl"
+                />
+                <h2 className="text-lg mb-4">{post.date}</h2>
+                <textarea
+                  name="content"
+                  cols="30"
+                  rows="10"
+                  defaultValue={post.content}
+                ></textarea>
+                <button
+                  className="mx-auto w-full bg-green-200"
+                  onClick={() => handleSave()}
+                >
+                  ✅
+                </button>
+              </>
+            ) : (
+              <>
+                <div className="h-96 aspect-square">
+                  <img
+                    src={post.imageurl}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                <h1 className="text-2xl">{post.title}</h1>
+                <h2 className="text-lg mb-4">{post.date}</h2>
+                {post.content.split('\n').map((text, index) => {
+                  return (
+                    <p className="text-lg" key={index}>
+                      {text}
+                    </p>
+                  );
+                })}
+              </>
+            )}
           </div>
         );
       })}
