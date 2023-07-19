@@ -64,8 +64,7 @@ export default function Home() {
                 className="rounded-full aspect-square w-32 sm:w-44 object-cover object-top"
               />
               <h2 className="text-sm sm:text-xl">
-                Ich würde meinen rechten Arm geben - den linken eher nicht so…
-                ich bin Linkshändlerin
+                «Stimmrecht für Alle, gleiche Rechte für Alle, Alles für Alle!»
               </h2>
             </div>
           </div>
