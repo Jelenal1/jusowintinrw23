@@ -1,43 +1,52 @@
 'use client';
 
-import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
-import { db, storage } from "../firebase";
-import { addDoc, collection } from "firebase/firestore";
+import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
+import { db, storage } from '../firebase';
+import { addDoc, collection } from 'firebase/firestore';
 
 export default function UploadForm() {
-
-  const postImage = async (image:File) => {
+  const postImage = async (image: File) => {
     const imageRef = ref(storage, `blog/${image.name}`);
-    const snapshot = await uploadBytes(imageRef, image)
+    const snapshot = await uploadBytes(imageRef, image);
     const url = await getDownloadURL(snapshot.ref);
     console.log(url);
     return url;
-  }
+  };
 
-  const postDataToDb = async (title: string, content: string, imageurl: string) => {
+  const postDataToDb = async (
+    title: string,
+    content: string,
+    imageurl: string
+  ) => {
     try {
-      await addDoc(collection(db, "blogposts"), {
+      await addDoc(collection(db, 'blogposts'), {
         title: title,
         content: content,
-        imageurl: imageurl
-      })
-      return true
+        imageurl: imageurl,
+      });
+      return true;
     } catch (error) {
-      console.log(error)
-      return error
+      console.log(error);
+      return error;
     }
-  }
+  };
 
   const handlePost = async (title: string, content: string, image: File) => {
     const imageurl = await postImage(image);
-    postDataToDb(title, content, imageurl)
-  }
+    postDataToDb(title, content, imageurl);
+  };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    handlePost(e.target.title.value, e.target.content.value, e.target.image.files[0]);
-
-  }
+    handlePost(
+      e.target.title.value,
+      e.target.content.value,
+      e.target.image.files[0]
+    );
+    e.target.title.value = '';
+    e.target.content.value = '';
+    e.target.image.value = '';
+  };
 
   return (
     <form

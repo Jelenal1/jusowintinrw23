@@ -5,6 +5,7 @@ import Login from './Login';
 import { auth } from '../firebase';
 import UploadForm from './UploadForm';
 import { useState } from 'react';
+import BlogPostsAdmin from './BlogPostsAdmin';
 
 export default function RenderBlogposts() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -19,7 +20,14 @@ export default function RenderBlogposts() {
   return (
     <div>
       <h1 className="text-2xl text-center">Blog</h1>
-      {loggedIn ? <UploadForm /> : <Login />}
+      {loggedIn ? (
+        <>
+          <UploadForm />
+          <BlogPostsAdmin />
+        </>
+      ) : (
+        <Login />
+      )}
     </div>
   );
 }
