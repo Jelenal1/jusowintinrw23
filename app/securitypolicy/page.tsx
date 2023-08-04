@@ -18,57 +18,57 @@ export default function securitypolicy() {
   <p>Stand: 4. August 2023</p>
   <h2 className="text-2xl font-bold my-2" >Inhaltsübersicht</h2>{" "}
   <ul className="mb-0.5">
-    <li>
+    <li className="hover:underline">
       <a className="index-link" href="#m716">
         Präambel
       </a>
     </li>
-    <li>
+    <li className="hover:underline">
       <a className="index-link" href="#m3">
         Verantwortlicher
       </a>
     </li>
-    <li>
+    <li className="hover:underline">
       <a className="index-link" href="#mOverview">
         Übersicht der Verarbeitungen
       </a>
     </li>
-    <li>
+    <li className="hover:underline">
       <a className="index-link" href="#m2427">
         Maßgebliche Rechtsgrundlagen
       </a>
     </li>
-    <li>
+    <li className="hover:underline">
       <a className="index-link" href="#m25">
         Übermittlung von personenbezogenen Daten
       </a>
     </li>
-    <li>
+    <li className="hover:underline">
       <a className="index-link" href="#m24">
         Internationale Datentransfers
       </a>
     </li>
-    <li>
+    <li className="hover:underline">
       <a className="index-link" href="#m134">
         Einsatz von Cookies
       </a>
     </li>
-    <li>
+    <li className="hover:underline">
       <a className="index-link" href="#m354">
         Wahrnehmung von Aufgaben nach Satzung oder Geschäftsordnung
       </a>
     </li>
-    <li>
+    <li className="hover:underline">
       <a className="index-link" href="#m225">
         Bereitstellung des Onlineangebotes und Webhosting
       </a>
     </li>
-    <li>
+    <li className="hover:underline">
       <a className="index-link" href="#m104">
         Blogs und Publikationsmedien
       </a>
     </li>
-    <li>
+    <li className="hover:underline">
       <a className="index-link" href="#m328">
         Plugins und eingebettete Funktionen sowie Inhalte
       </a>
