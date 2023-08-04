@@ -10,9 +10,6 @@ export default function Footer() {
       <Link href="/" className="hover:underline">
         Home
       </Link>
-      <Link href="/imprint" className="hover:underline">
-        Impressum
-      </Link>
       <Link href="/securitypolicy" className="hover:underline">
         Datenschutzerklärung
       </Link>
