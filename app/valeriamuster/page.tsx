@@ -14,7 +14,7 @@ export default function ValeriaMuster() {
 		<div className={style.main}>
 			<div className={style.quotecard}>
 			<img
-				src='/img/valeria_muster-2.jpg'
+				src='/img/valeria_muster.jpg'
 				className={style.image}
 			/>
 			<div className={style.quote}>
