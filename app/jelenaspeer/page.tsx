@@ -22,8 +22,7 @@ export default function JelenaSpeer() {
           </div>
           <h2 className="lg:text-2xl text-sm sm:ml-5">
             «Ich bin trans, antifaschistisch und queerfeministisch - ein bunter
-            Wirbelwind im Sturm der Rebellion. Akzeptiere meine Existenz oder
-            werde vom Wind der Veränderung fortgeweht.»
+            Wirbelwind im Sturm der Rebellion. Akzeptiere meine Existenz.»
           </h2>
         </div>
       </div>

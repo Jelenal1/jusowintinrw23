@@ -3,13 +3,13 @@ import Link from 'next/link';
 
 export default function Home() {
   const style = {
-    card: 'border bg-gray-100 rounded-lg p-2 m-2',
+    card: 'border bg-gray-50 rounded-lg p-2 m-2',
     cardimagewarpper: 'flex items-center gap-2',
   };
 
   return (
     <>
-      <h1 className="text-2xl text-center">Unsere Kanditat*innen</h1>
+      <h1 className="text-2xl lg:text-3xl text-center my-4">Kanditat*innen</h1>
       <div className="grid items-center lg:grid-cols-2">
         <Link href="/valeriamuster">
           <div className={style.card}>
@@ -79,7 +79,7 @@ export default function Home() {
               <h2 className="text-sm sm:text-xl">
                 «Ich bin trans, antifaschistisch und queerfeministisch - ein
                 bunter Wirbelwind im Sturm der Rebellion. Akzeptiere meine
-                Existenz oder werde vom Wind der Veränderung fortgeweht.»
+                Existenz.»
               </h2>
             </div>
           </div>
