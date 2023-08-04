@@ -29,7 +29,7 @@ function BlogPosts() {
   });
 
   return (
-    <div className="p-2 min-h-screen">
+    <div className="p-2">
       {blogposts.map((post) => {
         return (
           <div
