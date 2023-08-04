@@ -15,7 +15,7 @@ export default function Home() {
           <div className={style.card}>
             <div className={style.cardimagewarpper}>
               <img
-                src="/img/Valeria_muster-2.jpg"
+                src="/img/Valeria_muster.jpg"
                 alt="Valeria Muster"
                 className="rounded-full aspect-square w-32 sm:w-44 object-cover object-top"
               />
@@ -31,7 +31,7 @@ export default function Home() {
             <div className={style.cardimagewarpper}>
               <img
                 src="/img/M-Weidmann.jpg"
-                alt="Valeria Muster"
+                alt="Michi Weidmann"
                 className="rounded-full aspect-square w-32 sm:w-44 object-cover object-top"
               />
               <h2 className="text-sm sm:text-xl">
@@ -45,7 +45,7 @@ export default function Home() {
             <div className={style.cardimagewarpper}>
               <img
                 src="/img/Rafael_Rüegg.jpg"
-                alt="Valeria Muster"
+                alt="Rafael Rüegg"
                 className="rounded-full aspect-square w-32 sm:w-44 object-cover object-top"
               />
               <h2 className="text-sm sm:text-xl">
@@ -59,7 +59,7 @@ export default function Home() {
             <div className={style.cardimagewarpper}>
               <img
                 src="/img/Pia_Voss.jpg"
-                alt="Valeria Muster"
+                alt="Pia Voss"
                 className="rounded-full aspect-square w-32 sm:w-44 object-cover object-top"
               />
               <h2 className="text-sm sm:text-xl">
@@ -73,7 +73,7 @@ export default function Home() {
             <div className={style.cardimagewarpper}>
               <img
                 src="/img/J_Speer.jpg"
-                alt="Valeria Muster"
+                alt="Jelena Speer"
                 className="rounded-full aspect-square w-32 sm:w-44 object-cover object-top"
               />
               <h2 className="text-sm sm:text-xl">
