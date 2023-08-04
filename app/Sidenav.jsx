@@ -12,7 +12,7 @@ function Sidenav({ open, setClosed }) {
     >
       <div
         className={
-          "flex flex-col h-screen w-40 bg-rose-500 opacity-100 items-center border-l-4 border-black"
+          "flex flex-col h-screen w-40 bg-red-500 opacity-100 items-center border-l-4 border-black"
         }
       >
         <button className="p-2 h-fit mb-20 mt-5" href="/" >

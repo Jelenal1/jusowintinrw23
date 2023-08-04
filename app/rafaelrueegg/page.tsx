@@ -24,28 +24,30 @@ export default function RafaelRueegg() {
 					<span className='text-xs'>18</span>
 				</div>
 				<h2 className='lg:text-2xl text-sm sm:ml-5'>
-					«Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, ab.»
+					«Wir sind stolz auf unsere direkte Demokratie, aber wir haben sie nicht dort wo wir am meisten sind, beim Arbeitsplatz.»
 				</h2>
 			</div>
 			</div>
 			<div className={style.paragraphwrapper}>
 				<h2 className={style.paragraphtitel}>Mein Leben</h2>
 				<p className={style.paragraph}>
-				Klettern, Segeln, Kendo
+				Ich beginne mein Studium zum Bachelor of Law. In meiner Freizeit mache ich gerne Sport und genieß die Natur.
 				</p>
 			</div>
 
 			<div className={style.paragraphwrapper}>
 				<h2 className={style.paragraphtitel}>Warum kandidiere ich</h2>
 				<p className={style.paragraph}>
-				Ich kandidire weil Nonbinär keine Rechte haben und für eine gerechte Welt.
+				In der Schweiz herrscht die Ungleichheit. Nonbinäre Menschen werden nicht anerkannt. Queere Menschen werden diskriminiert. <br />
+				 Die Schere zwischen Arm und Reich ist gigantisch. Es wird gegen Ausländer*innen gehetzt. Gegen solche Missstände kandidiere ich. Auf zu einer sozialistischen Welt.
 				</p>
 			</div>
 
 			<div className={style.paragraphwrapper}>
 				<h2 className={style.paragraphtitel}>Für das stehe ich</h2>
 				<p className={style.paragraph}>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas molestiae placeat quod aliquid enim a dolor repudiandae consequuntur fuga maxime?
+				Ökosozialismus, Antifaschismus, Queerfeminismus <br />
+				Auf zur sozialistischen Revolution!
 				</p>
 			</div>
 
