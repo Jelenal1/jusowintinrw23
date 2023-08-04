@@ -10,7 +10,6 @@ import {
 
 import { db } from '../firebase.js';
 import { useState } from 'react';
-import { deleteObject } from 'firebase/storage';
 
 interface Post {
   id: string;
@@ -47,6 +46,7 @@ function BlogPostsAdmin() {
     if (onEdit === null) return;
     await setDoc(doc(db, 'blogposts', onEdit.id), {
       title: onEdit.title,
+      date: (new Date()).toLocaleDateString(),
       content: onEdit.content,
       imageurl: onEdit.imageurl,
     });
@@ -88,7 +88,10 @@ function BlogPostsAdmin() {
                   type="text"
                   name="title"
                   defaultValue={post.title}
-                  className="text-xl"
+                  className="text-xl border"
+                  onChange={(e) => {
+                    setOnEdit({ ...post, title: e.target.value });
+                  }}
                 />
                 <h2 className="text-lg mb-4">{post.date}</h2>
                 <textarea
@@ -96,6 +99,10 @@ function BlogPostsAdmin() {
                   cols={30}
                   rows={10}
                   defaultValue={post.content}
+                  onChange={(e) => {
+                    setOnEdit({ ...post, content: e.target.value });
+                  }}
+                  className='border-y'
                 ></textarea>
                 <button
                   className="mx-auto w-full bg-green-200"
@@ -114,13 +121,16 @@ function BlogPostsAdmin() {
                 </div>
                 <h1 className="text-2xl">{post.title}</h1>
                 <h2 className="text-lg mb-4">{post.date}</h2>
+               
                 {post.content.split('\n').map((text, index) => {
                   return (
-                    <p className="text-lg" key={index}>
+                    <p className="text-lg text-left" key={index}>
                       {text}
                     </p>
                   );
                 })}
+          
+          
               </>
             )}
           </div>

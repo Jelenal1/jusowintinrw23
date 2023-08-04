@@ -51,7 +51,7 @@ function BlogPosts() {
             <h2 className="text-lg mb-4">{post.date}</h2>
             {post.content.split('\n').map((text, index) => {
               return (
-                <p className="text-lg" key={index}>
+                <p className="text-lg text-left" key={index}>
                   {text}
                 </p>
               );

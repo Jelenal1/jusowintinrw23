@@ -15,12 +15,14 @@ export default function UploadForm() {
 
   const postDataToDb = async (
     title: string,
+    date: string,
     content: string,
     imageurl: string
   ) => {
     try {
       await addDoc(collection(db, 'blogposts'), {
         title: title,
+        date: date,
         content: content,
         imageurl: imageurl,
       });
@@ -31,18 +33,20 @@ export default function UploadForm() {
     }
   };
 
-  const handlePost = async (title: string, content: string, image: File) => {
-    let imageurl = '';
+  const handlePost = async (title: string, date: string, content: string, image: File) => {
     if (image) {
-      imageurl = await postImage(image);
+      const imageurl = await postImage(image);
+    postDataToDb(title, date, content, imageurl);
+    } else {
+      postDataToDb(title, date, content, '');
     }
-    postDataToDb(title, content, imageurl);
   };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
     handlePost(
       e.target.title.value,
+      (new Date()).toLocaleDateString(),
       e.target.content.value,
       e.target.image.files[0]
     );
