@@ -252,7 +252,7 @@ export default function securitypolicy() {
   <ul className="m-elements">
     <li className="">
       <strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1
-      S. 1 lit. f) DSGVO).
+      S. 1 lit. f DSGVO).
     </li>
   </ul>
   <h2 className="text-2xl font-bold my-2" id="m354">Wahrnehmung von Aufgaben nach Satzung oder Geschäftsordnung</h2>
@@ -301,7 +301,7 @@ export default function securitypolicy() {
     <li className="">
       <strong>Rechtsgrundlagen:</strong> Vertragserfüllung und vorvertragliche
       Anfragen (Art. 6 Abs. 1 S. 1 lit. b) DSGVO). Berechtigte Interessen (Art.
-      6 Abs. 1 S. 1 lit. f) DSGVO).
+      6 Abs. 1 S. 1 lit. f DSGVO).
     </li>
   </ul>
   <h2 className="text-2xl font-bold my-2" id="m225">Bereitstellung des Onlineangebotes und Webhosting</h2>
@@ -330,7 +330,7 @@ export default function securitypolicy() {
     </li>
     <li className="">
       <strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1
-      S. 1 lit. f) DSGVO).
+      S. 1 lit. f DSGVO).
     </li>
   </ul>
   <p>
@@ -354,7 +354,7 @@ export default function securitypolicy() {
       Stabilität sicherzustellen;{" "}
       <span className="">
         <strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1
-        S. 1 lit. f) DSGVO).{" "}
+        S. 1 lit. f DSGVO).{" "}
       </span>
       <strong>Löschung von Daten:</strong> Logfile-Informationen werden für die
       Dauer von maximal 30 Tagen gespeichert und danach gelöscht oder
@@ -394,7 +394,7 @@ export default function securitypolicy() {
     </li>
     <li className="">
       <strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1
-      S. 1 lit. f) DSGVO).
+      S. 1 lit. f DSGVO).
     </li>
   </ul>
   <h2 className="text-2xl font-bold my-2" id="m328">Plugins und eingebettete Funktionen sowie Inhalte</h2>
@@ -439,7 +439,7 @@ export default function securitypolicy() {
     </li>
     <li className="">
       <strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1
-      S. 1 lit. f) DSGVO).
+      S. 1 lit. f DSGVO).
     </li>
   </ul>
   <p>
@@ -494,7 +494,7 @@ export default function securitypolicy() {
       Limited, Gordon House, Barrow Street, Dublin 4, Irland;{" "}
       <span className="">
         <strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1
-        S. 1 lit. f) DSGVO);{" "}
+        S. 1 lit. f DSGVO);{" "}
       </span>
       <strong>Website:</strong>{" "}
       <a href="https://fonts.google.com/" target="_blank">

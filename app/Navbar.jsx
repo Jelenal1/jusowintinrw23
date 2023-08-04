@@ -9,7 +9,7 @@ function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-red-500 p-4 flex">
+    <div className="bg-red-600 p-4 flex">
       <Link href="/">
         <div
           className="flex items-center text-2xl gap-2 p-1 select-none"
