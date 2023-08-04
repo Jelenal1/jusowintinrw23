@@ -17,7 +17,7 @@ export default function JelenaSpeer() {
         <div className={style.quote}>
           <div className="ml-2 mb-2 flex flex-col">
             <h2 className="lg:text-xl text-lg h-fit">Jelena Speer</h2>
-            <span className="text-xs">Sie/ihre</span>
+            <span className="text-xs">Sie/ihr</span>
             <span className="text-xs">18</span>
           </div>
           <h2 className="lg:text-2xl text-sm sm:ml-5">

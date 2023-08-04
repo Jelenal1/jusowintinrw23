@@ -20,7 +20,7 @@ export default function ValeriaMuster() {
 			<div className={style.quote}>
 				<div className='ml-2 mb-2 flex flex-col'>
 					<h2 className='lg:text-xl text-lg h-fit '>Valeria Muster</h2>
-					<span className='text-xs'>Sie/Ihr</span>
+					<span className='text-xs'>Sie/ihr</span>
 					<span className='text-xs'>21</span>
 
 				</div>
