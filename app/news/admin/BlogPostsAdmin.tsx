@@ -41,6 +41,7 @@ function BlogPostsAdmin() {
     if (imageOnEdit) {
       const reference = await uploadBytes((ref(storage, `blog ${imageOnEdit.name}`)), imageOnEdit)
       const url = await getDownloadURL(reference.ref);
+      if (onEdit) {
       setOnEdit({
         id: onEdit.id,
         title: onEdit.title,
@@ -48,6 +49,7 @@ function BlogPostsAdmin() {
         content: onEdit.content,
         imageurl: url
       })
+    }
     }
   }
 
@@ -100,7 +102,9 @@ function BlogPostsAdmin() {
                 </div>
                 <input type="file" name="image" typeof="image/*" onChange={
                   (e) => {
-                    handleImageChange(e.target.files[0]);
+                    if (e.target.files) {
+                    handleImageChange(e.target.files[0])
+                  }
                     
                   }
                 }/>
