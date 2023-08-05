@@ -8,8 +8,9 @@ import {
   setDoc,
 } from 'firebase/firestore';
 
-import { db } from '../firebase.js';
+import { db, storage } from '../firebase.js';
 import { useState } from 'react';
+import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 
 interface Post {
   id: string;
@@ -21,7 +22,7 @@ interface Post {
 
 function BlogPostsAdmin() {
   const [blogposts, setBlogposts] = useState<Post[]>([]);
-  const [onEdit, setOnEdit] = useState<Post | null>(null);
+  const [onEdit, setOnEdit] = useState<Post | null>(null)
 
   const q = query(collection(db, 'blogposts'));
   const unsubscribe = onSnapshot(q, (querySnapshot) => {
@@ -35,6 +36,20 @@ function BlogPostsAdmin() {
       }))
     );
   });
+
+  const handleImageChange = async (imageOnEdit : File) => {
+    if (imageOnEdit) {
+      const reference = await uploadBytes((ref(storage, `blog ${imageOnEdit.name}`)), imageOnEdit)
+      const url = await getDownloadURL(reference.ref);
+      setOnEdit({
+        id: onEdit.id,
+        title: onEdit.title,
+        date: onEdit.date,
+        content: onEdit.content,
+        imageurl: url
+      })
+    }
+  }
 
   const handleDelete = async (id: string) => {
     const docRef = doc(db, 'blogposts', id);
@@ -83,7 +98,12 @@ function BlogPostsAdmin() {
                     className="object-cover w-full h-full"
                   />
                 </div>
-                <input type="file" name="image" typeof="image/*" />
+                <input type="file" name="image" typeof="image/*" onChange={
+                  (e) => {
+                    handleImageChange(e.target.files[0]);
+                    
+                  }
+                }/>
                 <input
                   type="text"
                   name="title"

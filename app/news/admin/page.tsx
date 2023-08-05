@@ -1,5 +1,5 @@
 'use client';
-import { onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
+import { onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import BlogPosts from '../BlogPosts';
 import Login from './Login';
 import { auth } from '../firebase';
@@ -22,6 +22,7 @@ export default function RenderBlogposts() {
       <h1 className="text-2xl text-center">Blog</h1>
       {loggedIn ? (
         <>
+        <button className='flex ml-auto mr-5 bg-red-400 text-2xl p-2 rounded-xl' onClick={() => signOut(auth)}>🚪 Logout</button>
           <UploadForm />
           <BlogPostsAdmin />
         </>

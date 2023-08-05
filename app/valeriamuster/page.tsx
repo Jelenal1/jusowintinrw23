@@ -54,13 +54,6 @@ export default function ValeriaMuster() {
 				</p>
 			</div>
 
-			<div className={style.paragraphwrapper}>
-				<h2 className={style.paragraphtitel}>Für das stehe ich</h2>
-				<p className={style.paragraph}>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas molestiae placeat quod aliquid enim a dolor repudiandae consequuntur fuga maxime?
-				</p>
-			</div>
-
 		</div>
 	);
 }
