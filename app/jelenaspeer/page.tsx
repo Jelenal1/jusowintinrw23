@@ -40,7 +40,7 @@ export default function JelenaSpeer() {
         <p className={style.paragraph}>
           Ich kandidiere weil es mir auf die Nerven geht, wie viele
           Parlamentarier*innen die Probleme der Menschen missachten und nur für
-          eigenen kapitalistischen menschenfeindliche Interessen ihre Stimmen erheben. Ich
+          ihre eigenen kapitalistischen menschenfeindliche Interessen ihre Stimmen erheben. Ich
           habe sehr viele Privilegien, ich bin weiss und habe einen
           Schweizer-Pass. Ich möchte diese Privilegien für die Menschen nutzen, die sie
           nicht haben.
