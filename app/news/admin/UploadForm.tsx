@@ -73,6 +73,8 @@ export default function UploadForm() {
         name="image"
         className="border rounded-sm focus:outline outline-2 focus:outline-rose-500"
       />
+      <label htmlFor="fillimage">Stretch Picture</label>
+      <input type="checkbox" id="fillimage" defaultChecked={false} />
       <textarea
         name="content"
         className="border rounded-sm w-full"

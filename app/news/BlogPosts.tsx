@@ -10,6 +10,7 @@ interface Post {
   title: string;
   content: string;
   imageurl: string;
+  fillimage: boolean;
 }
 
 function BlogPosts() {
@@ -24,6 +25,7 @@ function BlogPosts() {
         date: doc.data().date,
         content: doc.data().content,
         imageurl: doc.data().imageurl,
+        fillimage: doc.data().fillimage,
       }))
     );
   });
@@ -38,11 +40,14 @@ function BlogPosts() {
           >
             {post.imageurl === '' ? null : (
               <>
-                <div className="h-96 aspect-square">
-                  <img
+                <div className="h-80 aspect-square">
+                 {post.fillimage ? <img
                     src={post.imageurl}
-                    className="object-cover w-full h-full"
-                  />
+                    className="object-fill w-full h-full"
+                  /> : <img
+                  src={post.imageurl}
+                  className="object-contain w-full h-full"
+                />} 
                 </div>
               </>
             )}
