@@ -13,6 +13,7 @@ export default function Footer() {
       <Link href="/securitypolicy" className="hover:underline">
         Datenschutzerklärung
       </Link>
+      <span className="mt-2.5 text-gray-800">Maintained by Jelena Speer</span>
     </div>
   );
 }

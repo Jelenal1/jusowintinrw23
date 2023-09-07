@@ -39,10 +39,10 @@ export default function JelenaSpeer() {
         <h2 className={style.paragraphtitel}>Warum kandidiere ich</h2>
         <p className={style.paragraph}>
           Ich kandidiere weil es mir auf die Nerven geht, wie viele
-          Parlamentarier*innen die Probleme der Menschen Missachten und nur für
-          Eignene kapitalistische menschenfeindliche Ihre Stimme erheben. Ich
-          habe sehr viele Privilegien, ich bin weiss, habe einen
-          Schweizer-Pass... Ich möchte diese Privilegien für die Nutzen, die sie
+          Parlamentarier*innen die Probleme der Menschen missachten und nur für
+          ihre eigenen kapitalistischen menschenfeindliche Interessen ihre Stimmen erheben. Ich
+          habe sehr viele Privilegien, ich bin weiss und habe einen
+          Schweizer-Pass. Ich möchte diese Privilegien für die Menschen nutzen, die sie
           nicht haben.
         </p>
       </div>
