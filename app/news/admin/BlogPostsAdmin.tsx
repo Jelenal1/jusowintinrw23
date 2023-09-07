@@ -19,6 +19,7 @@ interface Post {
   content: string;
   imageurl: string;
   fillimage: boolean;
+  author: string;
 }
 
 function BlogPostsAdmin() {
@@ -35,6 +36,7 @@ function BlogPostsAdmin() {
         content: doc.data().content,
         imageurl: doc.data().imageurl,
         fillimage: doc.data().fillimage,
+        author: doc.data().author,
       }))
     );
   });
@@ -50,7 +52,8 @@ function BlogPostsAdmin() {
         date: onEdit.date,
         content: onEdit.content,
         imageurl: url,
-        fillimage: onEdit.fillimage
+        fillimage: onEdit.fillimage,
+        author: onEdit.author
       })
     }
     }
@@ -69,7 +72,8 @@ function BlogPostsAdmin() {
       date: (new Date()).toLocaleDateString(),
       content: onEdit.content,
       imageurl: onEdit.imageurl,
-      fillimage: onEdit.fillimage
+      fillimage: onEdit.fillimage,
+      author: onEdit.author
     });
   };
 
@@ -118,6 +122,15 @@ function BlogPostsAdmin() {
                   type="text"
                   name="title"
                   defaultValue={post.title}
+                  className="text-xl border"
+                  onChange={(e) => {
+                    setOnEdit({ ...post, title: e.target.value });
+                  }}
+                />
+                <input
+                  type="text"
+                  name="title"
+                  defaultValue={post.author}
                   className="text-xl border"
                   onChange={(e) => {
                     setOnEdit({ ...post, title: e.target.value });
