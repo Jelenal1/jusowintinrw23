@@ -17,7 +17,9 @@ export default function UploadForm() {
     title: string,
     date: string,
     content: string,
-    imageurl: string
+    imageurl: string,
+    fillimage: boolean,
+    author: string
   ) => {
     try {
       await addDoc(collection(db, 'blogposts'), {
@@ -25,6 +27,8 @@ export default function UploadForm() {
         date: date,
         content: content,
         imageurl: imageurl,
+        fillimage: fillimage,
+        author: author
       });
       return true;
     } catch (error) {
@@ -33,12 +37,12 @@ export default function UploadForm() {
     }
   };
 
-  const handlePost = async (title: string, date: string, content: string, image: File) => {
+  const handlePost = async (title: string, date: string, content: string, image: File, fillimage: boolean, author: string) => {
     if (image) {
       const imageurl = await postImage(image);
-    postDataToDb(title, date, content, imageurl);
+    postDataToDb(title, date, content, imageurl, fillimage, author);
     } else {
-      postDataToDb(title, date, content, '');
+      postDataToDb(title, date, content, '', fillimage, author);
     }
   };
 
@@ -48,11 +52,15 @@ export default function UploadForm() {
       e.target.title.value,
       (new Date()).toLocaleDateString(),
       e.target.content.value,
-      e.target.image.files[0]
+      e.target.image.files[0],
+      e.target.fillimage.checked,
+      e.target.author.value
     );
     e.target.title.value = '';
     e.target.content.value = '';
     e.target.image.value = '';
+    e.target.fillimage.checked = false;
+    e.target.author.value = '';
   };
 
   return (
@@ -60,10 +68,16 @@ export default function UploadForm() {
       className="flex flex-col mx-auto text-center border px-5 pt-2 pb-3 my-2 w-2/3 lg:w-1/3"
       onSubmit={handleSubmit}
     >
-      <label htmlFor="email">Title</label>
+      <label htmlFor="title">Title</label>
       <input
         type="text"
         name="title"
+        className="border rounded-sm focus:outline outline-2 focus:outline-rose-500"
+      />
+      <label htmlFor="author">Author</label>
+      <input
+        type="text"
+        name="author"
         className="border rounded-sm focus:outline outline-2 focus:outline-rose-500"
       />
       <label htmlFor="image">Image</label>

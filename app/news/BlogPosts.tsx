@@ -11,6 +11,7 @@ interface Post {
   content: string;
   imageurl: string;
   fillimage: boolean;
+  author: string;
 }
 
 function BlogPosts() {
@@ -26,6 +27,7 @@ function BlogPosts() {
         content: doc.data().content,
         imageurl: doc.data().imageurl,
         fillimage: doc.data().fillimage,
+        author: doc.data().author,
       }))
     );
   });
@@ -53,6 +55,7 @@ function BlogPosts() {
             )}
 
             <h1 className="text-2xl">{post.title}</h1>
+            <h2 className="text-lg">{post.author}</h2>
             <h2 className="text-lg mb-4">{post.date}</h2>
             {post.content.split('\n').map((text, index) => {
               return (
