@@ -18,6 +18,7 @@ interface Post {
   title: string;
   content: string;
   imageurl: string;
+  fillimage: boolean;
 }
 
 function BlogPostsAdmin() {
@@ -33,6 +34,7 @@ function BlogPostsAdmin() {
         date: doc.data().date,
         content: doc.data().content,
         imageurl: doc.data().imageurl,
+        fillimage: doc.data().fillimage,
       }))
     );
   });
@@ -47,7 +49,8 @@ function BlogPostsAdmin() {
         title: onEdit.title,
         date: onEdit.date,
         content: onEdit.content,
-        imageurl: url
+        imageurl: url,
+        fillimage: onEdit.fillimage
       })
     }
     }
@@ -66,6 +69,7 @@ function BlogPostsAdmin() {
       date: (new Date()).toLocaleDateString(),
       content: onEdit.content,
       imageurl: onEdit.imageurl,
+      fillimage: onEdit.fillimage
     });
   };
 
@@ -97,9 +101,11 @@ function BlogPostsAdmin() {
                 <div className="h-96 aspect-square">
                   <img
                     src={post.imageurl}
-                    className="object-cover w-full h-full"
+                    className="object-contain w-full h-full"
                   />
                 </div>
+                <label htmlFor="fillimage">Stretch Picture</label>
+                <input type="checkbox" id="fillimage" defaultChecked={post.fillimage} onChange={(e) => setOnEdit({ ...post, fillimage: e.target.checked })}/>
                 <input type="file" name="image" typeof="image/*" onChange={
                   (e) => {
                     if (e.target.files) {
@@ -138,10 +144,13 @@ function BlogPostsAdmin() {
             ) : (
               <>
                 <div className="h-96 aspect-square">
-                  <img
+                 {post.fillimage ? <img
                     src={post.imageurl}
-                    className="object-cover w-full h-full"
-                  />
+                    className="object-fill w-full h-full"
+                  /> : <img
+                  src={post.imageurl}
+                  className="object-contain w-full h-full"
+                />} 
                 </div>
                 <h1 className="text-2xl">{post.title}</h1>
                 <h2 className="text-lg mb-4">{post.date}</h2>
